@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sticky Notes</title>
+        <link rel="stylesheet" href="./src/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="topnav" id="myTopnav">
+            <a href="#" onclick="toggleInstructions()">Instructions</a>
+            <a href="#" class="icon" onclick="toggleNav()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div class="instructions">
+            <h1>Welcome to My Sticky Notes App</h1>
+            <ul>
+                <li><p>For <strong>updating</strong> your notes, simply change the content of any note. Then, <strong>click outside the note.</strong></p></li>
+                <li><p>For <strong>deleting</strong> your notes, <strong>double click</strong> on the note you want to delete. Confirm the deletition.</p></li>
+                <li><p>Press the color buttons below to custom the page colors.</p></li>
+            </ul>
+        </div>
+        <div id="app">
+            <button class="add-note" type="button">+</button>
+        </div>
+        <div class="color-buttons">
+            <div class="color-button blue-button" onclick="changeBackground('blue')"></div>
+            <div class="color-button pink-button" onclick="changeBackground('pink')"></div>
+            <div class="color-button green-button" onclick="changeBackground('green')"></div>
+            <div class="color-button purple-button" onclick="changeBackground('purple')"></div>
+        </div>
+        
+    </body>
+    <footer style="position: fixed; bottom: 0;">
+		<a href="https://github.com/lop19029"><strong>Alex López</strong></a> &copy; 2022 
+    </footer>
+    <script src="./src/main.js"></script>
+</html>

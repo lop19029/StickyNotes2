@@ -1,0 +1,170 @@
+body{
+    margin: 0;
+    background: #192841;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+#app{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    padding: 25px;
+    gap: 25px;
+}
+
+.note{
+    height: 200px;
+    box-sizing: border-box;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+    resize: none;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.add-note{
+    height: 200px;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 120px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-note:hover{
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 25px;
+    z-index: 1;
+  }
+  
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    transition: background 0.2s;
+}
+
+.topnav a.active {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.instructions {
+    margin: 10px;
+    color: white;
+    position: fixed;
+    transform: translateY(-150%);
+    transition: 0.5s;
+    animation: fade-out 0.3s;
+}
+
+.open-instructions {
+    transform: translateY(1vh);
+    transition: 0.5s;
+    animation: fade-in 0.5s;
+}
+
+#app{
+    transition: 0.5s;
+}
+
+.open-app{
+    transform: translateY(50vh);
+    transition: 0.5s;
+}
+
+footer{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: rgb(37, 37, 37);
+    background-color: rgba(255, 255, 255, 0.76);
+}
+
+footer a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.color-buttons{
+    display: flex;
+    gap: 5px;
+    position: fixed;
+    bottom: 10%;
+    right: 0;
+    margin: 10px;
+}
+
+.color-buttons div {
+    padding: 15px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.blue-button{
+    background-color: #192841;
+}
+.pink-button{
+    background-color: #b20e66;
+}
+.green-button {
+    background-color: #3A6152;
+}
+.purple-button{
+    background-color: #4E2A84;
+}
+
+@keyframes fade-out {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+  
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
